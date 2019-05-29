@@ -7,8 +7,8 @@ resource "azurerm_resource_group" "resource-group" {
   name     = "${local.resource_group_name}"
   location = "${var.location}"
 
-  tags {
-    Name        = "${local.my_name}"
+  tags = {
+    Name        = "${local.resource_group_name}"
     Environment = "${local.my_env}"
     Terraform   = "true"
   }
